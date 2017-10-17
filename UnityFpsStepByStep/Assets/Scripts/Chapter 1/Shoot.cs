@@ -41,8 +41,15 @@ namespace Chapter1
         {
             if(Physics.Raycast(myTransform.TransformPoint(0,0,1), myTransform.forward, out hit, range))
             {
-                Debug.DrawRay(myTransform.TransformPoint(0,0,1), myTransform.forward, Color.cyan, 2f);
-                Debug.Log(hit.transform.name);
+                if(hit.transform.CompareTag("Enemy"))
+                {
+                    Debug.DrawRay(myTransform.TransformPoint(0, 0, 1), myTransform.forward, Color.cyan, 2f);
+                    Debug.Log("Hit Enemy " + hit.transform.name);
+                }
+                else
+                {
+                    Debug.Log("Not an enemy");
+                }
             }
         }
     }

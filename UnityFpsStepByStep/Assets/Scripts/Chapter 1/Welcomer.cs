@@ -19,7 +19,6 @@ public class Welcomer : MonoBehaviour {
     void SetInitialReferences()
     {
         textWelcome = GameObject.Find("TextWelcome").GetComponent<Text>();
-        Debug.Log(canvasWelcome);
     }
 
 	void DisplayWelcomeMessage()
