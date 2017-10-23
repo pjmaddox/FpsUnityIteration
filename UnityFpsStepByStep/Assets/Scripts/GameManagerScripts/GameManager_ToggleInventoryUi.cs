@@ -32,7 +32,7 @@ namespace s3
             }
         }
 
-        void ToggleInventory()
+        public void ToggleInventory()
         {
             if (inventoryCanvas)
             {
