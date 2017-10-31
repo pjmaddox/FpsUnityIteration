@@ -23,6 +23,8 @@ namespace s3
 		{
 			SetInitialReferences();
 
+            DeactivateAllInventoryItems();
+
             UpdateInventoryListAndUi();
             CheckIfHandsEmpty();
 

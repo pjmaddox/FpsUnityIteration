@@ -7,6 +7,8 @@ namespace s3
 	public class Enemy_Master : MonoBehaviour 
 	{
         public Transform myTarget;
+        public bool isOnRoute;
+        public bool isNavPaused;
 
         public delegate void GeneralEventHandler();
         public event GeneralEventHandler EventEnemyDie;
