@@ -28,8 +28,8 @@ namespace s3
 
         public void ProcessDamge(int baseDamage)
         {
-            var damageToApply = damageMultiplier * damageMultiplier;
-            enemyMaster.CallEventEnemyHealthDeduction(damageToApply);
+            var damageToApply = baseDamage * damageMultiplier;
+            enemyMaster.CallEventEnemyHealthDeduction(-damageToApply);
         }
 
         void RemoveThis()

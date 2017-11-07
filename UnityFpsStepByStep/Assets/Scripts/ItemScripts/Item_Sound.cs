@@ -28,7 +28,8 @@ namespace s3
 		
         void PlayThrowSound()
         {
-            PlayClip(throwSound);
+            if(throwSound)
+                PlayClip(throwSound);
         }
 
         void PlayClip(AudioClip clip)
