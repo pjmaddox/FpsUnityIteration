@@ -79,11 +79,12 @@ namespace s3
 
         IEnumerator RunBurstFire()
         {
-            for(int i = 0; i < shotsInBurst; ++i)
-            {
-                AttemptAttack();
-                yield return new WaitForSeconds(burstAttackDelay);
-            }
+            AttemptAttack();
+            yield return new WaitForSeconds(burstAttackDelay);
+            AttemptAttack();
+            yield return new WaitForSeconds(burstAttackDelay);
+            AttemptAttack();
+            yield return new WaitForSeconds(burstAttackDelay);
         }
 		
 		void OnEnable()
